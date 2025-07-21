@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar App de Equipes</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f5ff; /* Fundo azul claro igual ao do app */
+        }
+        .main-gradient {
+            background: linear-gradient(180deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .btn-download {
+            background-color: #22c55e; /* Verde do botão de cadastrar */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-download:hover {
+            background-color: #16a34a;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <main class="bg-white w-full max-w-lg mx-4 sm:mx-0 rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Seção Superior com Gradiente -->
+        <div class="main-gradient p-8 text-center text-white">
+            <!-- Espaço para a sua Logo -->
+            <div class="w-24 h-24 bg-white/20 rounded-full mx-auto flex items-center justify-center mb-4">
+                <img src="logo.png" alt="Logo do App" class="w-16 h-16">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">-->
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+            </div>
+            <h1 class="text-3xl font-bold">Gerenciador de Equipes</h1>
+            <p class="text-blue-200 mt-2">O seu app para montar e gerenciar times de vôlei.</p>
+        </div>
+
+        <!-- Seção de Conteúdo e Download -->
+        <div class="p-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Instalação Rápida e Fácil</h2>
+            <p class="text-gray-600 mb-6">
+                Clique no botão abaixo para baixar o arquivo APK. Talvez seja necessário permitir a instalação de fontes desconhecidas nas configurações do seu Android.
+            </p>
+
+            <!-- Botão de Download -->
+            <a href="#" id="download-link" class="btn-download w-full flex items-center justify-center text-white font-bold py-4 px-6 rounded-lg shadow-lg text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Baixar APK Agora
+            </a>
+
+            <div class="text-center mt-4">
+                <span class="text-sm text-gray-500">Versão 1.0.0 | Para Android</span>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="bg-gray-50 p-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2025 LIDEAC. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+
+    <script>
+        // Você pode adicionar aqui um link direto para o seu APK
+        // Exemplo: const apkUrl = 'https://seusite.com/app.apk';
+        const apkUrl = 'https://github.com/equipesapp/Apk-Equipes-App/releases/download/v1.0.0/application-5edb6dce-beb9-41a3-a5de-6b75ed6280a0.apk'; // IMPORTANTE: Substitua '#' pelo link do seu APK
+
+        document.getElementById('download-link').setAttribute('href', apkUrl);
+    </script>
+
+</body>
+</html>
